@@ -3,11 +3,13 @@ String score1 = "1.323432";
 String score2 = "0.32123";
 */
 
-
+//Convert the Strings into floats
 float score_1 = Float.parseFloat(score1);
 float score_2 = Float.parseFloat(score2);
 
+//Add the 2 scores together and subtract by 5, essentially putting the score on a 0 - 10 plane
 float finalConv = -5 - (score_1 + score_2);
 
+//Multiply by -10 to remove the negative and create a percentage
 float finalScore = finalConv * -10;
 
