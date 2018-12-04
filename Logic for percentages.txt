@@ -1,5 +1,14 @@
-public static double convert(String totalScore){
-         String[] scores = totalScore.split("\\s+");
+public class HelloWorld{
+
+     public static void main(String []args){
+        convert("2.0735223 -0.01255178");
+     }
+     
+     public static double convert(String totalScore){
+         String[] scores = totalScore.split(" ");
+         
+         System.out.println(scores[0]);
+         System.out.println(scores[1]);
         
         //Used for testing purposes
         //String score1 = "1.323432";
@@ -8,12 +17,14 @@ public static double convert(String totalScore){
         //Convert the Strings into doubles
         double score_1 = Double.parseDouble(scores[0]);
         double score_2 = Double.parseDouble(scores[1]);
-
+        
+        double finalScore2 = score_1 - Math.abs(score_2);
+        
         //Put the score on a 0 to -10 scale
-        double finalConv = -5 - (score_1 + score_2);
+        double test = (finalScore2) + 5;
 
         //Convert the scale to 0 to 10 and find a percentage
-        double finalScore = finalConv * -10;
+        double finalScore = test * 10;
         
         if (finalScore > 100){
             finalScore = 100.0;
@@ -22,6 +33,6 @@ public static double convert(String totalScore){
         }
         
         //Return final percentage
-        System.out.println(finalScore);
         return finalScore;
      }
+}
